@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     // extract all movies from JSON
                     JSONArray results = jsonObject.getJSONArray("results");
                     movies.addAll(Movie.fromJsonArray(results));
-
+                    adapter.notifyDataSetChanged();
                 }
                 catch (JSONException e)
                 {
